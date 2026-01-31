@@ -1,0 +1,1086 @@
+{
+  "users": [
+    {
+      "id": "user-superadmin-001",
+      "email": "superadmin@company.com",
+      "password": "super123",
+      "first_name": "Super",
+      "last_name": "Admin",
+      "phone": "+1-555-0099",
+      "role": "super_admin",
+      "status": "active",
+      "profile_picture_url": null,
+      "created_at": "2025-01-01T08:00:00Z",
+      "last_login_at": "2025-12-02T18:00:00Z"
+    },
+    {
+      "id": "user-admin-001",
+      "email": "admin@company.com",
+      "password": "admin123",
+      "first_name": "Admin",
+      "last_name": "User",
+      "phone": "+1-555-0100",
+      "role": "admin",
+      "status": "active",
+      "profile_picture_url": null,
+      "created_at": "2025-01-15T08:00:00Z",
+      "last_login_at": "2025-12-02T18:00:00Z"
+    },
+    {
+      "id": "user-manager-001",
+      "email": "sarah.manager@company.com",
+      "password": "manager123",
+      "first_name": "Sarah",
+      "last_name": "Johnson",
+      "phone": "+1-555-0101",
+      "role": "manager",
+      "status": "active",
+      "profile_picture_url": null,
+      "created_at": "2025-01-20T09:00:00Z",
+      "last_login_at": "2025-12-02T16:30:00Z"
+    },
+    {
+      "id": "user-engineer-001",
+      "email": "john.engineer@company.com",
+      "password": "engineer123",
+      "first_name": "John",
+      "last_name": "Smith",
+      "phone": "+1-555-0102",
+      "role": "engineer",
+      "status": "active",
+      "profile_picture_url": null,
+      "created_at": "2025-02-01T10:00:00Z",
+      "last_login_at": "2025-12-02T14:00:00Z"
+    },
+    {
+      "id": "user-engineer-002",
+      "email": "mike.field@company.com",
+      "password": "field123",
+      "first_name": "Mike",
+      "last_name": "Davis",
+      "phone": "+1-555-0103",
+      "role": "field_engineer",
+      "status": "active",
+      "profile_picture_url": null,
+      "created_at": "2025-02-10T11:00:00Z",
+      "last_login_at": "2025-12-02T12:00:00Z"
+    },
+    {
+      "id": "user-hse-001",
+      "email": "lisa.safety@company.com",
+      "password": "hse123",
+      "first_name": "Lisa",
+      "last_name": "Williams",
+      "phone": "+1-555-0104",
+      "role": "hse_officer",
+      "status": "active",
+      "profile_picture_url": null,
+      "created_at": "2025-01-25T09:30:00Z",
+      "last_login_at": "2025-12-02T15:00:00Z"
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-001",
+      "country": "Oman",
+      "name": "Marmul",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    },
+    {
+      "id": "proj-002",
+      "country": "Oman",
+      "name": "Qarn Alam",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    },
+    {
+      "id": "proj-003",
+      "country": "Saudi",
+      "name": "Dammam",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  ],
+  "units": [
+    {
+      "id": "unit-001",
+      "project_id": "proj-001",
+      "unit_type": "Rig",
+      "unit_number": "Rig 148",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    },
+    {
+      "id": "unit-002",
+      "project_id": "proj-001",
+      "unit_type": "Rig",
+      "unit_number": "Rig 149",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    },
+    {
+      "id": "unit-003",
+      "project_id": "proj-002",
+      "unit_type": "HFBU",
+      "unit_number": "HFBU-12",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    },
+    {
+      "id": "unit-004",
+      "project_id": "proj-002",
+      "unit_type": "Rigless",
+      "unit_number": "Hoist-5",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  ],
+  "wells": [
+    {
+      "id": "well-001",
+      "name": "Well Alpha-7",
+      "location": "Site A, Block 12",
+      "unit_id": "unit-001",
+      "rig_name": "Rig 148",
+      "well_type": "Development",
+      "well_shape": "Vertical",
+      "surface_coordinates": "21.45, 55.32",
+      "notes": "Initial exploration well in Block 12",
+      "status": "in_progress",
+      "created_by": "user-engineer-001",
+      "assigned_to": "user-engineer-001",
+      "started_at": "2025-11-28T06:00:00Z",
+      "completed_at": null,
+      "created_at": "2025-11-28T05:45:00Z",
+      "updated_at": "2025-12-02T10:30:00Z"
+    },
+    {
+      "id": "well-002",
+      "name": "Well Beta-3",
+      "location": "Site B, Block 15",
+      "unit_id": "unit-002",
+      "rig_name": "Rig 149",
+      "well_type": "Exploration",
+      "well_shape": "Deviated (J shape)",
+      "surface_coordinates": "21.55, 55.42",
+      "notes": "Production well with high yield expectations",
+      "status": "completed",
+      "created_by": "user-engineer-001",
+      "assigned_to": "user-engineer-001",
+      "started_at": "2025-11-15T07:00:00Z",
+      "completed_at": "2025-11-25T18:00:00Z",
+      "created_at": "2025-11-15T06:30:00Z",
+      "updated_at": "2025-11-25T18:00:00Z"
+    },
+    {
+      "id": "well-003",
+      "name": "Well Gamma-5",
+      "location": "Site C, Block 08",
+      "unit_id": "unit-003",
+      "rig_name": "HFBU-12",
+      "well_type": "Workover",
+      "well_shape": "Vertical",
+      "surface_coordinates": "21.65, 55.52",
+      "notes": "Exploratory well in new field",
+      "status": "draft",
+      "created_by": "user-engineer-002",
+      "assigned_to": "user-engineer-002",
+      "started_at": null,
+      "completed_at": null,
+      "created_at": "2025-12-01T14:00:00Z",
+      "updated_at": "2025-12-01T14:15:00Z"
+    },
+    {
+      "id": "well-004",
+      "name": "Well Delta-9",
+      "location": "Site A, Block 13",
+      "unit_id": "unit-001",
+      "rig_name": "Rig 148",
+      "well_type": "Development",
+      "well_shape": "Horizontal",
+      "surface_coordinates": "21.46, 55.33",
+      "notes": "Secondary well near Alpha-7",
+      "status": "completed",
+      "created_by": "user-engineer-001",
+      "assigned_to": "user-engineer-001",
+      "started_at": "2025-10-20T06:00:00Z",
+      "completed_at": "2025-11-10T17:00:00Z",
+      "created_at": "2025-10-20T05:30:00Z",
+      "updated_at": "2025-11-10T17:00:00Z"
+    },
+    {
+      "id": "well-005",
+      "name": "Well Epsilon-12",
+      "location": "Site D, Block 22",
+      "unit_id": "unit-004",
+      "rig_name": "Hoist-5",
+      "well_type": "Maintenance",
+      "well_shape": "Vertical",
+      "surface_coordinates": "21.75, 55.62",
+      "notes": "Deep formation drilling",
+      "status": "in_progress",
+      "created_by": "user-engineer-002",
+      "assigned_to": "user-engineer-002",
+      "started_at": "2025-11-30T07:30:00Z",
+      "completed_at": null,
+      "created_at": "2025-11-30T07:00:00Z",
+      "updated_at": "2025-12-02T09:00:00Z"
+    },
+    {
+      "id": "well-006",
+      "name": "Well Zeta-4",
+      "location": "Site B, Block 16",
+      "unit_id": "unit-002",
+      "rig_name": "Rig 149",
+      "well_type": "Exploration",
+      "well_shape": "Deviated (S shape)",
+      "surface_coordinates": "21.56, 55.43",
+      "notes": "Offshore production well",
+      "status": "suspended",
+      "created_by": "user-engineer-001",
+      "assigned_to": "user-engineer-001",
+      "started_at": "2025-11-05T08:00:00Z",
+      "completed_at": null,
+      "created_at": "2025-11-05T07:30:00Z",
+      "updated_at": "2025-11-20T16:00:00Z"
+    },
+    {
+      "id": "well-007",
+      "name": "Well Eta-1",
+      "location": "Site E, Block 30",
+      "unit_id": "unit-001",
+      "rig_name": "Rig 148",
+      "well_type": "Development",
+      "well_shape": "Vertical",
+      "surface_coordinates": "21.85, 55.72",
+      "notes": "First well in new concession area",
+      "status": "draft",
+      "created_by": "user-engineer-002",
+      "assigned_to": null,
+      "started_at": null,
+      "completed_at": null,
+      "created_at": "2025-12-02T08:00:00Z",
+      "updated_at": "2025-12-02T08:30:00Z"
+    },
+    {
+      "id": "well-008",
+      "name": "Well Theta-6",
+      "location": "Site A, Block 11",
+      "unit_id": "unit-001",
+      "rig_name": "Rig 148",
+      "well_type": "Development",
+      "well_shape": "Vertical",
+      "surface_coordinates": "21.47, 55.34",
+      "notes": "Replacement well for abandoned location",
+      "status": "completed",
+      "created_by": "user-engineer-001",
+      "assigned_to": "user-engineer-001",
+      "started_at": "2025-09-15T06:00:00Z",
+      "completed_at": "2025-10-05T18:00:00Z",
+      "created_at": "2025-09-15T05:45:00Z",
+      "updated_at": "2025-10-05T18:00:00Z"
+    }
+  ],
+  "well_sections": [
+    {
+      "id": "sect-001",
+      "well_id": "well-001",
+      "section_name": "Surface Section (17.5\")",
+      "hole_size": 17.5,
+      "casing_size": 13.375,
+      "target_depth": 500,
+      "status": "completed",
+      "started_at": "2025-11-28T08:00:00Z",
+      "completed_at": "2025-11-30T18:00:00Z",
+      "created_at": "2025-11-28T08:00:00Z",
+      "updated_at": "2025-11-30T18:00:00Z"
+    },
+    {
+      "id": "sect-002",
+      "well_id": "well-001",
+      "section_name": "Intermediate Section (12.25\")",
+      "hole_size": 12.25,
+      "casing_size": 9.625,
+      "target_depth": 1500,
+      "status": "drilling",
+      "started_at": "2025-12-01T06:00:00Z",
+      "completed_at": null,
+      "created_at": "2025-12-01T06:00:00Z",
+      "updated_at": "2025-12-02T10:00:00Z"
+    }
+  ],
+  "checklists": [
+    {
+      "id": "cl-001",
+      "well_id": "well-001",
+      "section_id": "sect-001",
+      "type": "Pre-spud",
+      "status": "completed",
+      "data": {
+        "items": [
+          {
+            "name": "Rig Inspection",
+            "checked": true
+          },
+          {
+            "name": "Safety Meeting",
+            "checked": true
+          }
+        ]
+      },
+      "submitted_by": "user-engineer-001",
+      "submitted_at": "2025-11-28T07:30:00Z",
+      "created_at": "2025-11-28T07:00:00Z",
+      "updated_at": "2025-11-28T07:30:00Z"
+    },
+    {
+      "id": "cl-002",
+      "well_id": "well-001",
+      "section_id": "sect-002",
+      "type": "BHA",
+      "status": "completed",
+      "data": {
+        "items": [
+          {
+            "name": "Bit Photo",
+            "checked": true
+          },
+          {
+            "name": "Stabilizer Photo",
+            "checked": true
+          }
+        ]
+      },
+      "photos": [
+        {
+          "url": "https://example.com/bit.jpg",
+          "caption": "Bit #452"
+        }
+      ],
+      "submitted_by": "user-engineer-001",
+      "submitted_at": "2025-12-01T05:30:00Z",
+      "created_at": "2025-12-01T05:00:00Z",
+      "updated_at": "2025-12-01T05:30:00Z"
+    }
+  ],
+  "approvals": [
+    {
+      "id": "app-001",
+      "entity_type": "section",
+      "entity_id": "sect-001",
+      "approval_type": "TD Confirmation",
+      "status": "approved",
+      "approver_email": "client@example.com",
+      "approved_at": "2025-11-30T16:00:00Z",
+      "evidence_url": "https://example.com/email-approval.png",
+      "comments": "TD confirmed at 502m",
+      "created_at": "2025-11-30T15:00:00Z",
+      "updated_at": "2025-11-30T16:00:00Z"
+    }
+  ],
+  "safety_checklist_templates": [
+    {
+      "id": "check-001",
+      "name": "Rig inspection completed",
+      "description": "Complete visual inspection of rig structure and components",
+      "is_required": true,
+      "display_order": 1,
+      "is_active": true
+    },
+    {
+      "id": "check-002",
+      "name": "PPE checked and verified",
+      "description": "Verify all personal protective equipment is present and in good condition",
+      "is_required": true,
+      "display_order": 2,
+      "is_active": true
+    },
+    {
+      "id": "check-003",
+      "name": "Tools inspected",
+      "description": "Inspect all tools for damage and proper function",
+      "is_required": true,
+      "display_order": 3,
+      "is_active": true
+    },
+    {
+      "id": "check-004",
+      "name": "Safety briefing conducted",
+      "description": "Conduct safety briefing with all crew members",
+      "is_required": true,
+      "display_order": 4,
+      "is_active": true
+    },
+    {
+      "id": "check-005",
+      "name": "Emergency equipment verified",
+      "description": "Check first aid kits, fire extinguishers, and emergency exits",
+      "is_required": false,
+      "display_order": 5,
+      "is_active": true
+    },
+    {
+      "id": "check-006",
+      "name": "Communication systems tested",
+      "description": "Test radios and emergency communication systems",
+      "is_required": false,
+      "display_order": 6,
+      "is_active": true
+    },
+    {
+      "id": "check-007",
+      "name": "Weather conditions assessed",
+      "description": "Review weather forecast and assess suitability for operations",
+      "is_required": true,
+      "display_order": 7,
+      "is_active": true
+    },
+    {
+      "id": "check-008",
+      "name": "Permits verified",
+      "description": "Verify all necessary work permits are in place",
+      "is_required": true,
+      "display_order": 8,
+      "is_active": true
+    }
+  ],
+  "well_safety_checklists": [
+    {
+      "id": "wc-001",
+      "well_id": "well-001",
+      "checklist_item_id": "check-001",
+      "is_checked": true,
+      "checked_at": "2025-11-28T06:00:00Z",
+      "checked_by": "user-engineer-001"
+    },
+    {
+      "id": "wc-002",
+      "well_id": "well-001",
+      "checklist_item_id": "check-002",
+      "is_checked": true,
+      "checked_at": "2025-11-28T06:05:00Z",
+      "checked_by": "user-engineer-001"
+    },
+    {
+      "id": "wc-003",
+      "well_id": "well-001",
+      "checklist_item_id": "check-003",
+      "is_checked": true,
+      "checked_at": "2025-11-28T06:10:00Z",
+      "checked_by": "user-engineer-001"
+    },
+    {
+      "id": "wc-004",
+      "well_id": "well-001",
+      "checklist_item_id": "check-004",
+      "is_checked": true,
+      "checked_at": "2025-11-28T06:15:00Z",
+      "checked_by": "user-engineer-001"
+    },
+    {
+      "id": "wc-005",
+      "well_id": "well-001",
+      "checklist_item_id": "check-005",
+      "is_checked": false
+    },
+    {
+      "id": "wc-006",
+      "well_id": "well-002",
+      "checklist_item_id": "check-001",
+      "is_checked": true,
+      "checked_at": "2025-11-15T07:00:00Z",
+      "checked_by": "user-engineer-001"
+    },
+    {
+      "id": "wc-007",
+      "well_id": "well-002",
+      "checklist_item_id": "check-002",
+      "is_checked": true,
+      "checked_at": "2025-11-15T07:05:00Z",
+      "checked_by": "user-engineer-001"
+    },
+    {
+      "id": "wc-008",
+      "well_id": "well-002",
+      "checklist_item_id": "check-003",
+      "is_checked": true,
+      "checked_at": "2025-11-15T07:10:00Z",
+      "checked_by": "user-engineer-001"
+    },
+    {
+      "id": "wc-009",
+      "well_id": "well-002",
+      "checklist_item_id": "check-004",
+      "is_checked": true,
+      "checked_at": "2025-11-15T07:15:00Z",
+      "checked_by": "user-engineer-001"
+    },
+    {
+      "id": "wc-010",
+      "well_id": "well-002",
+      "checklist_item_id": "check-005",
+      "is_checked": true,
+      "checked_at": "2025-11-15T07:20:00Z",
+      "checked_by": "user-engineer-001"
+    }
+  ],
+  "hazards": [
+    {
+      "id": "hazard-001",
+      "subject": "Oil spill near pump station",
+      "description": "Small oil leak detected near the main pump station. Approximately 2 liters of crude oil on concrete surface. Immediate cleanup required.",
+      "location": "Pump Station #3, Site A",
+      "category": "environmental",
+      "priority": "high",
+      "status": "in_progress",
+      "before_photo_url": "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=400",
+      "after_photo_url": null,
+      "additional_notes": "Cleanup crew dispatched. Source of leak being investigated.",
+      "reported_by": "user-engineer-001",
+      "assigned_to": "user-hse-001",
+      "reported_at": "2025-12-01T10:30:00Z",
+      "resolved_at": null,
+      "created_at": "2025-12-01T10:30:00Z",
+      "updated_at": "2025-12-01T14:00:00Z"
+    },
+    {
+      "id": "hazard-002",
+      "subject": "Damaged safety harness",
+      "description": "Safety harness #SH-245 found with frayed straps and damaged buckle. Removed from service immediately.",
+      "location": "Equipment Storage, RIG-001",
+      "category": "ppe",
+      "priority": "medium",
+      "status": "closed",
+      "before_photo_url": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400",
+      "after_photo_url": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400",
+      "additional_notes": "Harness replaced with new unit. Old harness destroyed per protocol.",
+      "reported_by": "user-engineer-002",
+      "assigned_to": "user-hse-001",
+      "reported_at": "2025-11-29T08:15:00Z",
+      "resolved_at": "2025-11-29T16:00:00Z",
+      "created_at": "2025-11-29T08:15:00Z",
+      "updated_at": "2025-11-29T16:00:00Z"
+    },
+    {
+      "id": "hazard-003",
+      "subject": "Cluttered walkway",
+      "description": "Tools and equipment left on main walkway creating tripping hazard. Multiple items including wrenches, chains, and hoses.",
+      "location": "Main Platform, RIG-002",
+      "category": "housekeeping",
+      "priority": "low",
+      "status": "open",
+      "before_photo_url": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400",
+      "after_photo_url": null,
+      "additional_notes": "Crew notified. Housekeeping to be completed before end of shift.",
+      "reported_by": "user-hse-001",
+      "assigned_to": "user-engineer-001",
+      "reported_at": "2025-12-02T09:00:00Z",
+      "resolved_at": null,
+      "created_at": "2025-12-02T09:00:00Z",
+      "updated_at": "2025-12-02T09:00:00Z"
+    },
+    {
+      "id": "hazard-004",
+      "subject": "Faulty pressure gauge",
+      "description": "Pressure gauge on drill line showing erratic readings. Could lead to incorrect pressure assessments.",
+      "location": "Drilling Floor, RIG-001",
+      "category": "equipment",
+      "priority": "high",
+      "status": "in_progress",
+      "before_photo_url": null,
+      "after_photo_url": null,
+      "additional_notes": "Replacement gauge ordered. Using backup gauge temporarily.",
+      "reported_by": "user-engineer-001",
+      "assigned_to": "user-manager-001",
+      "reported_at": "2025-12-01T13:45:00Z",
+      "resolved_at": null,
+      "created_at": "2025-12-01T13:45:00Z",
+      "updated_at": "2025-12-02T08:00:00Z"
+    },
+    {
+      "id": "hazard-005",
+      "subject": "Chemical storage labels illegible",
+      "description": "Several chemical containers in storage area have faded or damaged labels, making identification difficult.",
+      "location": "Chemical Storage, Site A",
+      "category": "environmental",
+      "priority": "medium",
+      "status": "open",
+      "before_photo_url": "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=400",
+      "after_photo_url": null,
+      "additional_notes": "Need to re-label all affected containers per MSDS requirements.",
+      "reported_by": "user-hse-001",
+      "assigned_to": "user-hse-001",
+      "reported_at": "2025-11-30T11:20:00Z",
+      "resolved_at": null,
+      "created_at": "2025-11-30T11:20:00Z",
+      "updated_at": "2025-11-30T11:20:00Z"
+    },
+    {
+      "id": "hazard-006",
+      "subject": "Loose railing on stairs",
+      "description": "Handrail on stairs to upper deck is loose and wobbly. Safety concern for personnel using stairs.",
+      "location": "Stairs B, RIG-003",
+      "category": "equipment",
+      "priority": "high",
+      "status": "in_progress",
+      "before_photo_url": null,
+      "after_photo_url": null,
+      "additional_notes": "Maintenance crew working on repair. Caution tape placed as temporary measure.",
+      "reported_by": "user-engineer-002",
+      "assigned_to": "user-manager-001",
+      "reported_at": "2025-12-01T07:30:00Z",
+      "resolved_at": null,
+      "created_at": "2025-12-01T07:30:00Z",
+      "updated_at": "2025-12-01T15:00:00Z"
+    },
+    {
+      "id": "hazard-007",
+      "subject": "Missing fire extinguisher",
+      "description": "Fire extinguisher #FE-12 missing from designated location. Last inspection was 2 weeks ago.",
+      "location": "Deck C, RIG-002",
+      "category": "equipment",
+      "priority": "high",
+      "status": "open",
+      "before_photo_url": null,
+      "after_photo_url": null,
+      "additional_notes": "Investigation ongoing to locate extinguisher. Temporary replacement installed.",
+      "reported_by": "user-hse-001",
+      "assigned_to": "user-manager-001",
+      "reported_at": "2025-12-02T14:00:00Z",
+      "resolved_at": null,
+      "created_at": "2025-12-02T14:00:00Z",
+      "updated_at": "2025-12-02T14:00:00Z"
+    },
+    {
+      "id": "hazard-008",
+      "subject": "Slippery surface from hydraulic leak",
+      "description": "Small hydraulic oil leak creating slippery surface on metal deck. Slip hazard for crew.",
+      "location": "Equipment Bay, RIG-004",
+      "category": "housekeeping",
+      "priority": "medium",
+      "status": "closed",
+      "before_photo_url": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400",
+      "after_photo_url": "https://images.unsplash.com/photo-1621905251918-48416bd88184?w=400",
+      "additional_notes": "Leak repaired, surface cleaned and inspected. Anti-slip mat installed.",
+      "reported_by": "user-engineer-002",
+      "assigned_to": "user-hse-001",
+      "reported_at": "2025-11-28T16:00:00Z",
+      "resolved_at": "2025-11-29T10:00:00Z",
+      "created_at": "2025-11-28T16:00:00Z",
+      "updated_at": "2025-11-29T10:00:00Z"
+    },
+    {
+      "id": "hazard-009",
+      "subject": "Inadequate lighting in storage area",
+      "description": "Two overhead lights out in main storage area, creating dark spots and visibility issues.",
+      "location": "Storage Building, Site D",
+      "category": "other",
+      "priority": "low",
+      "status": "open",
+      "before_photo_url": null,
+      "after_photo_url": null,
+      "additional_notes": "Replacement bulbs ordered. Temporary portable lights provided.",
+      "reported_by": "user-engineer-001",
+      "assigned_to": "user-manager-001",
+      "reported_at": "2025-12-02T08:30:00Z",
+      "resolved_at": null,
+      "created_at": "2025-12-02T08:30:00Z",
+      "updated_at": "2025-12-02T08:30:00Z"
+    },
+    {
+      "id": "hazard-010",
+      "subject": "Expired first aid supplies",
+      "description": "First aid kit #FA-08 contains several expired items including bandages and antiseptic.",
+      "location": "Control Room, RIG-001",
+      "category": "ppe",
+      "priority": "medium",
+      "status": "closed",
+      "before_photo_url": null,
+      "after_photo_url": null,
+      "additional_notes": "All expired items removed and replaced. Kit now fully stocked and current.",
+      "reported_by": "user-hse-001",
+      "assigned_to": "user-hse-001",
+      "reported_at": "2025-11-27T10:00:00Z",
+      "resolved_at": "2025-11-27T14:00:00Z",
+      "created_at": "2025-11-27T10:00:00Z",
+      "updated_at": "2025-11-27T14:00:00Z"
+    }
+  ],
+  "hse_tasks": [
+    {
+      "id": "task-001",
+      "title": "Weekly Safety Inspection",
+      "description": "Conduct comprehensive weekly safety inspection of all rig equipment, walkways, and safety gear. Complete checklist and submit report.",
+      "status": "pending",
+      "priority": "high",
+      "assigned_to": "user-engineer-001",
+      "assigned_by": "user-manager-001",
+      "due_date": "2025-12-05T17:00:00Z",
+      "started_at": null,
+      "completed_at": null,
+      "assigned_at": "2025-12-01T09:00:00Z",
+      "created_at": "2025-12-01T09:00:00Z",
+      "updated_at": "2025-12-01T09:00:00Z"
+    },
+    {
+      "id": "task-002",
+      "title": "Environmental Compliance Report",
+      "description": "Complete monthly environmental compliance documentation including waste disposal logs, emissions tracking, and spill prevention inspection.",
+      "status": "overdue",
+      "priority": "high",
+      "assigned_to": "user-hse-001",
+      "assigned_by": "user-manager-001",
+      "due_date": "2025-11-29T17:00:00Z",
+      "started_at": null,
+      "completed_at": null,
+      "assigned_at": "2025-11-15T10:00:00Z",
+      "created_at": "2025-11-15T10:00:00Z",
+      "updated_at": "2025-12-01T12:00:00Z"
+    },
+    {
+      "id": "task-003",
+      "title": "PPE Inventory Check",
+      "description": "Audit all personal protective equipment inventory. Document missing or damaged items and submit requisition for replacements.",
+      "status": "in_progress",
+      "priority": "medium",
+      "assigned_to": "user-engineer-002",
+      "assigned_by": "user-manager-001",
+      "due_date": "2025-12-08T17:00:00Z",
+      "started_at": "2025-12-02T08:00:00Z",
+      "completed_at": null,
+      "assigned_at": "2025-11-28T11:00:00Z",
+      "created_at": "2025-11-28T11:00:00Z",
+      "updated_at": "2025-12-02T08:00:00Z"
+    },
+    {
+      "id": "task-004",
+      "title": "Fire Drill Execution",
+      "description": "Organize and execute quarterly fire drill. Ensure all personnel participate and complete evaluation forms.",
+      "status": "pending",
+      "priority": "high",
+      "assigned_to": "user-hse-001",
+      "assigned_by": "user-manager-001",
+      "due_date": "2025-12-10T17:00:00Z",
+      "started_at": null,
+      "completed_at": null,
+      "assigned_at": "2025-12-01T14:00:00Z",
+      "created_at": "2025-12-01T14:00:00Z",
+      "updated_at": "2025-12-01T14:00:00Z"
+    },
+    {
+      "id": "task-005",
+      "title": "Emergency Response Plan Review",
+      "description": "Review and update site emergency response plan. Verify contact information and evacuation procedures are current.",
+      "status": "completed",
+      "priority": "medium",
+      "assigned_to": "user-hse-001",
+      "assigned_by": "user-manager-001",
+      "due_date": "2025-11-25T17:00:00Z",
+      "started_at": "2025-11-20T09:00:00Z",
+      "completed_at": "2025-11-24T16:00:00Z",
+      "assigned_at": "2025-11-18T10:00:00Z",
+      "created_at": "2025-11-18T10:00:00Z",
+      "updated_at": "2025-11-24T16:00:00Z"
+    },
+    {
+      "id": "task-006",
+      "title": "Chemical Handling Training",
+      "description": "Conduct refresher training for all personnel on proper chemical handling procedures and MSDS reading.",
+      "status": "pending",
+      "priority": "medium",
+      "assigned_to": "user-hse-001",
+      "assigned_by": "user-manager-001",
+      "due_date": "2025-12-15T17:00:00Z",
+      "started_at": null,
+      "completed_at": null,
+      "assigned_at": "2025-12-02T10:00:00Z",
+      "created_at": "2025-12-02T10:00:00Z",
+      "updated_at": "2025-12-02T10:00:00Z"
+    },
+    {
+      "id": "task-007",
+      "title": "Incident Report Follow-up",
+      "description": "Follow up on three recent minor incidents. Verify corrective actions have been implemented and document results.",
+      "status": "in_progress",
+      "priority": "high",
+      "assigned_to": "user-manager-001",
+      "assigned_by": "user-admin-001",
+      "due_date": "2025-12-04T17:00:00Z",
+      "started_at": "2025-12-01T13:00:00Z",
+      "completed_at": null,
+      "assigned_at": "2025-11-30T09:00:00Z",
+      "created_at": "2025-11-30T09:00:00Z",
+      "updated_at": "2025-12-01T13:00:00Z"
+    },
+    {
+      "id": "task-008",
+      "title": "Safety Equipment Calibration",
+      "description": "Arrange calibration for all gas detectors, pressure gauges, and monitoring equipment due for service.",
+      "status": "pending",
+      "priority": "medium",
+      "assigned_to": "user-engineer-001",
+      "assigned_by": "user-hse-001",
+      "due_date": "2025-12-12T17:00:00Z",
+      "started_at": null,
+      "completed_at": null,
+      "assigned_at": "2025-12-02T11:00:00Z",
+      "created_at": "2025-12-02T11:00:00Z",
+      "updated_at": "2025-12-02T11:00:00Z"
+    }
+  ],
+  "voluntary_action_templates": [
+    {
+      "id": "va-template-001",
+      "title": "Housekeeping Check",
+      "description": "Perform voluntary housekeeping check of your work area",
+      "display_order": 1,
+      "is_active": true
+    },
+    {
+      "id": "va-template-002",
+      "title": "PPE Audit",
+      "description": "Audit personal protective equipment condition and availability",
+      "display_order": 2,
+      "is_active": true
+    },
+    {
+      "id": "va-template-003",
+      "title": "Fire Extinguisher Inspection",
+      "description": "Visual inspection of fire extinguishers in your area",
+      "display_order": 3,
+      "is_active": true
+    },
+    {
+      "id": "va-template-004",
+      "title": "Safety Suggestion Submission",
+      "description": "Submit a safety improvement suggestion",
+      "display_order": 4,
+      "is_active": true
+    },
+    {
+      "id": "va-template-005",
+      "title": "Near-Miss Reporting",
+      "description": "Report any near-miss incidents for preventive analysis",
+      "display_order": 5,
+      "is_active": true
+    }
+  ],
+  "voluntary_actions": [
+    {
+      "id": "va-001",
+      "template_id": "va-template-001",
+      "user_id": "user-engineer-001",
+      "is_completed": true,
+      "completed_at": "2025-12-02T10:00:00Z"
+    },
+    {
+      "id": "va-002",
+      "template_id": "va-template-002",
+      "user_id": "user-engineer-001",
+      "is_completed": false
+    },
+    {
+      "id": "va-003",
+      "template_id": "va-template-003",
+      "user_id": "user-engineer-001",
+      "is_completed": true,
+      "completed_at": "2025-12-01T15:00:00Z"
+    },
+    {
+      "id": "va-004",
+      "template_id": "va-template-001",
+      "user_id": "user-engineer-002",
+      "is_completed": false
+    },
+    {
+      "id": "va-005",
+      "template_id": "va-template-003",
+      "user_id": "user-hse-001",
+      "is_completed": true,
+      "completed_at": "2025-12-02T09:00:00Z"
+    }
+  ],
+  "daily_reports": [
+    {
+      "id": "report-001",
+      "report_date": "2025-12-01",
+      "well_location": "Well Alpha-7, Site A",
+      "operations_summary": "Drilling operations continued at depth 3,200m. Encountered minor formation changes. Rate of penetration steady at 15m/hour. All equipment functioning normally.",
+      "safety_status": "safe",
+      "issues_description": null,
+      "submitted_by": "user-engineer-001",
+      "submitted_at": "2025-12-01T18:30:00Z",
+      "created_at": "2025-12-01T18:30:00Z",
+      "updated_at": "2025-12-01T18:30:00Z"
+    },
+    {
+      "id": "report-002",
+      "report_date": "2025-11-30",
+      "well_location": "Well Alpha-7, Site A",
+      "operations_summary": "Drilling progressed to 3,180m. Mud weight adjusted to 12.5 ppg. Performed wiper trip without issues. Good formation stability.",
+      "safety_status": "safe",
+      "issues_description": null,
+      "submitted_by": "user-engineer-001",
+      "submitted_at": "2025-11-30T19:00:00Z",
+      "created_at": "2025-11-30T19:00:00Z",
+      "updated_at": "2025-11-30T19:00:00Z"
+    },
+    {
+      "id": "report-003",
+      "report_date": "2025-11-29",
+      "well_location": "Well Epsilon-12, Site D",
+      "operations_summary": "Commenced drilling operations after rig-up completion. Initial depth 250m achieved. Safety briefing completed with full crew attendance.",
+      "safety_status": "safe",
+      "issues_description": null,
+      "submitted_by": "user-engineer-002",
+      "submitted_at": "2025-11-29T18:00:00Z",
+      "created_at": "2025-11-29T18:00:00Z",
+      "updated_at": "2025-11-29T18:00:00Z"
+    },
+    {
+      "id": "report-004",
+      "report_date": "2025-11-28",
+      "well_location": "Well Alpha-7, Site A",
+      "operations_summary": "Drilling at 3,150m depth. Minor hydraulic leak detected on pump #2. Operations suspended for 2 hours for repair.",
+      "safety_status": "issues",
+      "issues_description": "Hydraulic leak on pump #2 required immediate attention. Leak contained and repaired. No environmental impact. Pump tested and returned to service.",
+      "submitted_by": "user-engineer-001",
+      "submitted_at": "2025-11-28T18:45:00Z",
+      "created_at": "2025-11-28T18:45:00Z",
+      "updated_at": "2025-11-28T18:45:00Z"
+    },
+    {
+      "id": "report-005",
+      "report_date": "2025-11-27",
+      "well_location": "Well Beta-3, Site B",
+      "operations_summary": "Final well completion activities. Installed production tubing. Pressure tested to 5,000 psi - passed. Well ready for production.",
+      "safety_status": "safe",
+      "issues_description": null,
+      "submitted_by": "user-engineer-001",
+      "submitted_at": "2025-11-27T17:30:00Z",
+      "created_at": "2025-11-27T17:30:00Z",
+      "updated_at": "2025-11-27T17:30:00Z"
+    },
+    {
+      "id": "report-006",
+      "report_date": "2025-12-02",
+      "well_location": "Well Epsilon-12, Site D",
+      "operations_summary": "Drilling depth reached 480m. Changed drill bit due to normal wear. New bit performing well. Formation as expected per geological survey.",
+      "safety_status": "safe",
+      "issues_description": null,
+      "submitted_by": "user-engineer-002",
+      "submitted_at": "2025-12-02T18:15:00Z",
+      "created_at": "2025-12-02T18:15:00Z",
+      "updated_at": "2025-12-02T18:15:00Z"
+    },
+    {
+      "id": "report-007",
+      "report_date": "2025-11-26",
+      "well_location": "Well Beta-3, Site B",
+      "operations_summary": "Running casing operations completed successfully. Cemented casing in place. Waiting on cement to cure - 24 hour wait time.",
+      "safety_status": "safe",
+      "issues_description": null,
+      "submitted_by": "user-engineer-001",
+      "submitted_at": "2025-11-26T19:00:00Z",
+      "created_at": "2025-11-26T19:00:00Z",
+      "updated_at": "2025-11-26T19:00:00Z"
+    },
+    {
+      "id": "report-008",
+      "report_date": "2025-11-25",
+      "well_location": "Well Beta-3, Site B",
+      "operations_summary": "Well completion phase initiated. Logged well at final depth of 4,200m. Results analyzed - excellent reservoir characteristics confirmed.",
+      "safety_status": "safe",
+      "issues_description": null,
+      "submitted_by": "user-engineer-001",
+      "submitted_at": "2025-11-25T18:30:00Z",
+      "created_at": "2025-11-25T18:30:00Z",
+      "updated_at": "2025-11-25T18:30:00Z"
+    },
+    {
+      "id": "report-009",
+      "report_date": "2025-11-24",
+      "well_location": "Well Delta-9, Site A",
+      "operations_summary": "Post-completion testing completed. Production test showed 1,200 barrels per day capacity. Well handed over to production team.",
+      "safety_status": "safe",
+      "issues_description": null,
+      "submitted_by": "user-engineer-001",
+      "submitted_at": "2025-11-24T17:00:00Z",
+      "created_at": "2025-11-24T17:00:00Z",
+      "updated_at": "2025-11-24T17:00:00Z"
+    },
+    {
+      "id": "report-010",
+      "report_date": "2025-11-23",
+      "well_location": "Well Delta-9, Site A",
+      "operations_summary": "Final well cleanup operations. Circulated well to remove debris. Fluid quality good. Preparing for production test.",
+      "safety_status": "safe",
+      "issues_description": null,
+      "submitted_by": "user-engineer-001",
+      "submitted_at": "2025-11-23T18:00:00Z",
+      "created_at": "2025-11-23T18:00:00Z",
+      "updated_at": "2025-11-23T18:00:00Z"
+    },
+    {
+      "id": "report-011",
+      "report_date": "2025-11-22",
+      "well_location": "Well Alpha-7, Site A",
+      "operations_summary": "Drilling operations paused due to weather conditions. High winds exceeding safety limits. Secured rig and equipment. Crew safety briefing conducted.",
+      "safety_status": "issues",
+      "issues_description": "Operations suspended due to high wind speeds (45+ mph). All personnel accounted for. Equipment secured. Monitoring weather conditions for resumption.",
+      "submitted_by": "user-engineer-001",
+      "submitted_at": "2025-11-22T19:30:00Z",
+      "created_at": "2025-11-22T19:30:00Z",
+      "updated_at": "2025-11-22T19:30:00Z"
+    },
+    {
+      "id": "report-012",
+      "report_date": "2025-11-21",
+      "well_location": "Well Epsilon-12, Site D",
+      "operations_summary": "Rig mobilization continued. Major equipment installation 85% complete. Foundation work completed. Power systems tested successfully.",
+      "safety_status": "safe",
+      "issues_description": null,
+      "submitted_by": "user-engineer-002",
+      "submitted_at": "2025-11-21T18:00:00Z",
+      "created_at": "2025-11-21T18:00:00Z",
+      "updated_at": "2025-11-21T18:00:00Z"
+    },
+    {
+      "id": "report-013",
+      "report_date": "2025-11-20",
+      "well_location": "Well Zeta-4, Site B",
+      "operations_summary": "Operations suspended pending resolution of formation pressure issues. Engineering team consulted. Additional testing required before resumption.",
+      "safety_status": "issues",
+      "issues_description": "Anomalous formation pressure readings detected. Operations suspended as precautionary measure. Awaiting specialist evaluation. Well secured and monitored.",
+      "submitted_by": "user-engineer-001",
+      "submitted_at": "2025-11-20T16:00:00Z",
+      "created_at": "2025-11-20T16:00:00Z",
+      "updated_at": "2025-11-20T16:00:00Z"
+    },
+    {
+      "id": "report-014",
+      "report_date": "2025-11-19",
+      "well_location": "Well Zeta-4, Site B",
+      "operations_summary": "Drilling at 2,850m depth. Encountered unexpected formation pressure changes. Reduced drilling rate as precaution. Monitoring situation closely.",
+      "safety_status": "safe",
+      "issues_description": null,
+      "submitted_by": "user-engineer-001",
+      "submitted_at": "2025-11-19T18:30:00Z",
+      "created_at": "2025-11-19T18:30:00Z",
+      "updated_at": "2025-11-19T18:30:00Z"
+    },
+    {
+      "id": "report-015",
+      "report_date": "2025-11-18",
+      "well_location": "Well Theta-6, Site A",
+      "operations_summary": "Final documentation and site cleanup completed. Well officially handed over to production team. Demobilization of drilling equipment initiated.",
+      "safety_status": "safe",
+      "issues_description": null,
+      "submitted_by": "user-engineer-001",
+      "submitted_at": "2025-11-18T17:00:00Z",
+      "created_at": "2025-11-18T17:00:00Z",
+      "updated_at": "2025-11-18T17:00:00Z"
+    }
+  ]
+}

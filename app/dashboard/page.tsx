@@ -1,0 +1,272 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import { db } from '@/lib/api-client';
+import {
+    Wrench,
+    AlertTriangle,
+    ListTodo,
+    FileText,
+    TrendingUp,
+    Users,
+    Clock,
+    CheckCircle
+} from 'lucide-react';
+
+type DashboardStats = {
+    active_wells: number;
+    completed_wells: number;
+    open_hazards: number;
+    in_progress_hazards: number;
+    high_priority_hazards: number;
+    overdue_tasks: number;
+    pending_tasks: number;
+    todays_reports: number;
+    active_users: number;
+};
+
+export default function DashboardPage() {
+    const [stats, setStats] = useState<DashboardStats | null>(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        loadStats();
+    }, []);
+
+    const loadStats = async () => {
+        const { data } = await db.getDashboardStats();
+        if (data) {
+            setStats(data);
+        }
+        setLoading(false);
+    };
+
+    if (loading) {
+        return (
+            <div className="flex items-center justify-center h-64">
+                <div className="text-center">
+                    <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+                    <p className="mt-4 text-gray-600">Loading dashboard...</p>
+                </div>
+            </div>
+        );
+    }
+
+    const statCards = [
+        {
+            title: 'Active Wells',
+            value: stats?.active_wells || 0,
+            icon: Wrench,
+            color: 'blue',
+            gradient: 'from-blue-500 to-blue-600',
+            bgColor: 'bg-blue-50',
+            iconColor: 'text-blue-600',
+            change: '+12%',
+            changeType: 'positive' as const
+        },
+        {
+            title: 'Completed Wells',
+            value: stats?.completed_wells || 0,
+            icon: CheckCircle,
+            color: 'green',
+            gradient: 'from-green-500 to-green-600',
+            bgColor: 'bg-green-50',
+            iconColor: 'text-green-600',
+            change: '+8%',
+            changeType: 'positive' as const
+        },
+        {
+            title: 'Open Hazards',
+            value: stats?.open_hazards || 0,
+            icon: AlertTriangle,
+            color: 'orange',
+            gradient: 'from-orange-500 to-orange-600',
+            bgColor: 'bg-orange-50',
+            iconColor: 'text-orange-600',
+            change: '-5%',
+            changeType: 'negative' as const
+        },
+        {
+            title: 'High Priority Hazards',
+            value: stats?.high_priority_hazards || 0,
+            icon: AlertTriangle,
+            color: 'red',
+            gradient: 'from-red-500 to-red-600',
+            bgColor: 'bg-red-50',
+            iconColor: 'text-red-600',
+            change: '-2%',
+            changeType: 'negative' as const
+        },
+        {
+            title: 'Overdue Tasks',
+            value: stats?.overdue_tasks || 0,
+            icon: Clock,
+            color: 'red',
+            gradient: 'from-red-500 to-red-600',
+            bgColor: 'bg-red-50',
+            iconColor: 'text-red-600',
+            change: '+1',
+            changeType: 'neutral' as const
+        },
+        {
+            title: 'Pending Tasks',
+            value: stats?.pending_tasks || 0,
+            icon: ListTodo,
+            color: 'indigo',
+            gradient: 'from-indigo-500 to-indigo-600',
+            bgColor: 'bg-indigo-50',
+            iconColor: 'text-indigo-600',
+            change: '+3',
+            changeType: 'neutral' as const
+        },
+        {
+            title: "Today's Reports",
+            value: stats?.todays_reports || 0,
+            icon: FileText,
+            color: 'purple',
+            gradient: 'from-purple-500 to-purple-600',
+            bgColor: 'bg-purple-50',
+            iconColor: 'text-purple-600',
+            change: '0',
+            changeType: 'neutral' as const
+        },
+        {
+            title: 'Active Users',
+            value: stats?.active_users || 0,
+            icon: Users,
+            color: 'teal',
+            gradient: 'from-teal-500 to-teal-600',
+            bgColor: 'bg-teal-50',
+            iconColor: 'text-teal-600',
+            change: '0',
+            changeType: 'neutral' as const
+        }
+    ];
+
+    return (
+        <div className="space-y-6">
+            {/* Header */}
+            <div>
+                <h1 className="text-3xl font-bold text-gray-900">Dashboard Overview</h1>
+                <p className="text-gray-600 mt-2">Welcome to the Drilling Operations & HSE Management System</p>
+            </div>
+
+            {/* Stats Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {statCards.map((card, index) => {
+                    const Icon = card.icon;
+                    return (
+                        <div
+                            key={index}
+                            className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100"
+                        >
+                            <div className="p-6">
+                                <div className="flex items-center justify-between">
+                                    <div className={`p-3 rounded-lg ${card.bgColor}`}>
+                                        <Icon className={`w-6 h-6 ${card.iconColor}`} />
+                                    </div>
+                                    <div className={`px-2 py-1 rounded-full text-xs font-semibold
+                    ${card.changeType === 'positive' ? 'bg-green-100 text-green-700' :
+                                            card.changeType === 'negative' ? 'bg-red-100 text-red-700' :
+                                                'bg-gray-100 text-gray-700'}`}
+                                    >
+                                        {card.change}
+                                    </div>
+                                </div>
+                                <div className="mt-4">
+                                    <h3 className="text-gray-600 text-sm font-medium">{card.title}</h3>
+                                    <p className={`text-3xl font-bold mt-2 bg-gradient-to-r ${card.gradient} bg-clip-text text-transparent`}>
+                                        {card.value}
+                                    </p>
+                                </div>
+                            </div>
+                            <div className={`h-1 bg-gradient-to-r ${card.gradient}`}></div>
+                        </div>
+                    );
+                })}
+            </div>
+
+            {/* Quick Actions */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                {/* Recent Activity */}
+                <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                    <h2 className="text-lg font-bold text-gray-900 mb-4">Quick Actions</h2>
+                    <div className="space-y-3">
+                        <a href="/dashboard/wells" className="flex items-center justify-between p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors group">
+                            <div className="flex items-center space-x-3">
+                                <Wrench className="w-5 h-5 text-blue-600" />
+                                <span className="font-medium text-gray-900">Manage Wells</span>
+                            </div>
+                            <TrendingUp className="w-5 h-5 text-blue-600 group-hover:translate-x-1 transition-transform" />
+                        </a>
+                        <a href="/dashboard/hazards" className="flex items-center justify-between p-4 bg-orange-50 rounded-lg hover:bg-orange-100 transition-colors group">
+                            <div className="flex items-center space-x-3">
+                                <AlertTriangle className="w-5 h-5 text-orange-600" />
+                                <span className="font-medium text-gray-900">Review Hazards</span>
+                            </div>
+                            <TrendingUp className="w-5 h-5 text-orange-600 group-hover:translate-x-1 transition-transform" />
+                        </a>
+                        <a href="/dashboard/tasks" className="flex items-center justify-between p-4 bg-indigo-50 rounded-lg hover:bg-indigo-100 transition-colors group">
+                            <div className="flex items-center space-x-3">
+                                <ListTodo className="w-5 h-5 text-indigo-600" />
+                                <span className="font-medium text-gray-900">View Tasks</span>
+                            </div>
+                            <TrendingUp className="w-5 h-5 text-indigo-600 group-hover:translate-x-1 transition-transform" />
+                        </a>
+                        <a href="/dashboard/reports" className="flex items-center justify-between p-4 bg-purple-50 rounded-lg hover:bg-purple-100 transition-colors group">
+                            <div className="flex items-center space-x-3">
+                                <FileText className="w-5 h-5 text-purple-600" />
+                                <span className="font-medium text-gray-900">Daily Reports</span>
+                            </div>
+                            <TrendingUp className="w-5 h-5 text-purple-600 group-hover:translate-x-1 transition-transform" />
+                        </a>
+                    </div>
+                </div>
+
+                {/* System Status */}
+                <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                    <h2 className="text-lg font-bold text-gray-900 mb-4">System Status</h2>
+                    <div className="space-y-4">
+                        <div className="flex items-center justify-between">
+                            <span className="text-gray-600">Database Status</span>
+                            <span className="flex items-center text-green-600 font-medium">
+                                <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
+                                Connected
+                            </span>
+                        </div>
+                        <div className="flex items-center justify-between">
+                            <span className="text-gray-600">Data Mode</span>
+                            <span className="flex items-center text-yellow-600 font-medium">
+                                <div className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></div>
+                                Mock Data
+                            </span>
+                        </div>
+                        <div className="flex items-center justify-between">
+                            <span className="text-gray-600">Last Sync</span>
+                            <span className="text-gray-900 font-medium">Just now</span>
+                        </div>
+                        <div className="flex items-center justify-between">
+                            <span className="text-gray-600">Active Sessions</span>
+                            <span className="text-gray-900 font-medium">{stats?.active_users || 0}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Alert Banner */}
+            {stats && (stats.overdue_tasks || 0) > 0 && (
+                <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-lg">
+                    <div className="flex items-center">
+                        <AlertTriangle className="w-5 h-5 text-red-500 mr-3" />
+                        <div>
+                            <h3 className="text-red-800 font-semibold">Attention Required</h3>
+                            <p className="text-red-700 text-sm">
+                                You have {stats.overdue_tasks} overdue task{stats.overdue_tasks !== 1 ? 's' : ''} that need immediate attention.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            )}
+        </div>
+    );
+}
